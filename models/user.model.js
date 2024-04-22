@@ -15,7 +15,12 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
-}, {timestamps: true});
+    avtar:{
+        type: String,
+        default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGDohX4qAelLzi3t8vCfqccDFxifY-huxkmRrgnSRoig&s",
+    },
+}, 
+    {timestamps: true});
 
 const User = mongoose.model('User', userSchema);
 export default User;
